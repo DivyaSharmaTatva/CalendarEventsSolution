@@ -3,7 +3,8 @@ import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
 import {
   IPropertyPaneConfiguration,
-  PropertyPaneTextField
+  PropertyPaneTextField,
+  PropertyPaneToggle
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
@@ -11,12 +12,7 @@ import * as strings from 'CalendarListingWebPartStrings';
 import CalendarListing from './components/CalendarListing';
 import { ICalendarListingProps } from './components/ICalendarListingProps';
 
-export interface ICalendarListingWebPartProps {
-  strListURL: string;
-  intNoOfItems: number;  
-}
-
-export default class CalendarListingWebPart extends BaseClientSideWebPart <ICalendarListingWebPartProps> {
+export default class CalendarListingWebPart extends BaseClientSideWebPart <ICalendarListingProps> {
 
   public render(): void {
     const element: React.ReactElement<ICalendarListingProps> = React.createElement(
@@ -24,6 +20,11 @@ export default class CalendarListingWebPart extends BaseClientSideWebPart <ICale
       {
         strListURL: this.properties.strListURL,
         intNoOfItems: this.properties.intNoOfItems,
+        strRequiredShare: this.properties.strRequiredShare,
+        anyPageContext: this.context.pageContext,
+        anyContext:this.context,
+        anyObjDom:this.domElement,
+        strFromEmailAddress:this.properties.strFromEmailAddress
       }
     );
 
@@ -33,10 +34,6 @@ export default class CalendarListingWebPart extends BaseClientSideWebPart <ICale
   protected onDispose(): void {
     ReactDom.unmountComponentAtNode(this.domElement);
   }
-
-  // protected get dataVersion(): Version {
-  //   return Version.parse('1.0');
-  // }
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
@@ -52,6 +49,15 @@ export default class CalendarListingWebPart extends BaseClientSideWebPart <ICale
                 PropertyPaneTextField('intNoOfItems', {
                   label: strings.NoOfItemsFieldLabel,
                   value: '' //Number textbox
+                }),
+                PropertyPaneTextField('strFromEmailAddress', {
+                  label: strings.FromEmailAddressFieldLabel,
+                  value: ''
+                }),
+                PropertyPaneToggle('strRequiredShare', {
+                  label: strings.RequiredShare,
+                  onText: '' + strings.ToggleOnText + '',
+                  offText: '' + strings.ToggleOffText + ''
                 })
               ]
             }
