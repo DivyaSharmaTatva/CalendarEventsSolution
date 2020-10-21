@@ -7,7 +7,6 @@ import {
   PropertyPaneSlider
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
-
 import * as strings from 'CalendarWebPartStrings';
 import Calendar from './components/Calendar';
 import { ICalendarProps } from './components/ICalendarProps';
