@@ -3,7 +3,7 @@
 .form-group label sub {color:#ff0000; font-weight:600; line-height:13px; vertical-align: top; padding-left:2px;}
 .form-group label i.ms-Icon {cursor:pointer;  font-size:20px; color:#999999; line-height:20px; display: inline-block; vertical-align: bottom;}
 .form-control {font-size:16px; color:#666666; border-color:#dddddd; border-radius:2px; height:38px;outline:none !important;box-shadow:none !important;}
-
+a { text-decoration: none; }
 .card {background-color:#fff;border-radius: 8px;border:none; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);}
 .card .card-header {font-size:18px; line-height:22px; color:#fff; font-weight: 600; position:relative; padding:10px 10px 10px 40px; background-color:#2ca1d9;border-radius: 4px;}
 .card .card-header .icon {position: absolute; left:10px; top:10px; width:24px; height:24px; display: block;}
