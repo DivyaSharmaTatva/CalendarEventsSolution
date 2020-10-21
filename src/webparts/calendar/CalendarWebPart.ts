@@ -46,10 +46,6 @@ export default class CalendarWebPart extends BaseClientSideWebPart <ICalendarWeb
     ReactDom.unmountComponentAtNode(this.domElement);
   }
 
-  // protected get dataVersion(): Version {
-  //   return Version.parse('1.0');
-  // }
-
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     /// <summary>Configure the Property Pane.</summary>
 
