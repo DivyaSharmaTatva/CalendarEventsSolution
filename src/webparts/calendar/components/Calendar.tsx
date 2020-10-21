@@ -180,7 +180,7 @@ export default class Calendar extends React.Component<ICalendarProps, ICalendarS
               </div>
               <div className="media-body">
                 <h3>{item.Title}</h3>
-                {item.Description.replace(/<[^>]+>/g, '')}
+                {item.Description != null && item.Description.length > 0 ? item.Description.replace(/<[^>]+>/g, '') : ''}
                 <p className={styles.location + " d-flex align-items-center"}><img className={styles.icon} src={require('../../../Images/location.svg')} alt=""/> {item.Location != null && item.Location.length > 0 ? item.Location : strNoLocation}</p>
               </div>
           </div>
