@@ -1,0 +1,53 @@
+.form-group {margin-bottom:25px;}
+.form-group label {font-size:16px; color:#666666; font-weight:600;padding-bottom:5px;} 
+.form-group label sub {color:#ff0000; font-weight:600; line-height:13px; vertical-align: top; padding-left:2px;}
+.form-group label i.ms-Icon {cursor:pointer;  font-size:20px; color:#999999; line-height:20px; display: inline-block; vertical-align: bottom;}
+.form-control {font-size:16px; color:#666666; border-color:#dddddd; border-radius:2px; height:38px;outline:none !important;box-shadow:none !important;}
+
+.card {background-color:#fff;border-radius: 8px;border:none; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);}
+.card .card-header {font-size:18px; line-height:22px; color:#fff; font-weight: 600; position:relative; padding:10px 10px 10px 40px; background-color:#2ca1d9;border-radius: 4px;}
+.card .card-header .icon {position: absolute; left:10px; top:10px; width:24px; height:24px; display: block;}
+.card .card-header.view-all-block {padding-right:70px;}
+.card .card-header .view-all-btn {color:#fff;font-size:13px;padding:0px 8px 2px; border-radius:4px;border:1px solid #fff;display:inline-block;position:absolute;right:8px;top:8px;}
+.card .card-header .view-all-btn:hover {background-color:#fff; color:#2ca1d9;}
+
+.card .card-body {padding:10px 0px;}
+.card .card-body>ul>li {border-bottom:1px solid #e1e1e1; padding:8px 5px;}
+.card .card-body>ul>li:hover {background-color:#f6f6f6;}
+.card .card-body>ul>li:last-child {border-bottom:0px;}
+.card .card-body ul li h3 {font-size:16px; line-height:20px;color:#4f4f4f; font-weight: 600; padding-bottom:5px; margin-bottom:0px;}
+.card .card-body ul li p {font-size:14px; line-height:18px;  color:#666666; padding:0px;}
+
+.upcoming-events .media .icon {position: relative;z-index:1;}
+.upcoming-events .media .icon .month-name {font-size:10px; color:#fff; font-weight:600; text-transform:uppercase; z-index:2; text-align:center; position: absolute; left: 0; right:0; top:-1px;}
+.upcoming-events .media .icon .date {font-size:16px; color:#e57373;font-weight: bold; z-index:2; text-align:center; position: absolute; left: 0; right:0; top:16px;}
+.upcoming-events .media .icon.jan .date {color:#e57373;}
+.upcoming-events .media .icon.feb .date {color:#81C784;}
+.upcoming-events .media .icon.mar .date {color:#F06292;}
+.upcoming-events .media .icon.apr .date {color:#9CCC65;}
+.upcoming-events .media .icon.may .date {color:#BA68C8;}
+.upcoming-events .media .icon.jun .date {color:#A1887F;}
+.upcoming-events .media .icon.jul .date {color:#9575CD;}
+.upcoming-events .media .icon.aug .date {color:#FFD54F;}
+.upcoming-events .media .icon.sep .date {color:#90A4AE;}
+.upcoming-events .media .icon.oct .date {color:#FF8A65;}
+.upcoming-events .media .icon.nov .date {color:#4FC3F7;}
+.upcoming-events .media .icon.dec .date {color:#4DB6AC;}
+
+/* events-list */
+.events-list {max-height:400px; overflow:auto;}
+.events-list .media>.icon {width:40px; height:40px; display: block;}
+.events-list .media>.icon {width:40px; height:40px; display: block;}
+
+/* list-unstyled */
+.list-unstyled, .list-directory {max-height:370px; overflow:auto;}
+
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width:1199px) {
+	.card .card-header {font-size:18px;}
+}
+
+@media (max-width:767px) {
+	.events-list, .list-unstyled, .list-directory {max-height:100%; overflow:visible;}
+}

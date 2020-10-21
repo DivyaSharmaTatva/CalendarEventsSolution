@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "sope-demo-solution-client-side-solution",
+    "id": "29aeb994-48ac-4fdf-a461-d273ec6ab346",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/sope-demo-solution.sppkg"
+  }
+}

@@ -1,0 +1,12 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+
+.calendar {
+  .main-content { padding:65px 30px;}
+  
+  .location {font-size:14px; color: #888; padding-bottom:0px; padding-top:10px;}
+  .location .icon {width:14px; height:14px; margin-right:5px;}
+
+  .fixHeight { min-height: 460px; }
+  
+  .message {font-size: 16px;}
+}

@@ -1,0 +1,4 @@
+1. npm install sp-pnp-js --save
+2. npm install jquery --save
+3. npm install bootstrap --save
+4. npm install moment --save
