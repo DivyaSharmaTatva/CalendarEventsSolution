@@ -16,6 +16,7 @@ declare interface ICalendarListingWebPartStrings {
   ErrEmailFormat:string;
   FromEmailAddressFieldLabel:string;
   ErrFromEmailAddress:string;
+  StrItemNotFound:string;
 }
 
 declare module 'CalendarListingWebPartStrings' {

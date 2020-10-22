@@ -16,6 +16,7 @@ define([], function() {
     "MsgAddURL" : 'Please add "List URL" in the Web part Property to show the Upcoming Events.',
     "ErrEmailFormat" : "Please add email address in proper format",
     "FromEmailAddressFieldLabel" : "From email address to share the events",
-    "ErrFromEmailAddress" : 'Please add "From email address" in the Web part Property to share the event. '
+    "ErrFromEmailAddress" : 'Please add "From email address" in the Web part Property to share the event. ',
+    "StrItemNotFound" : "No records found."
   }
 });
