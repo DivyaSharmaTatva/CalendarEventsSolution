@@ -202,25 +202,28 @@ export default class CalendarListing extends React.Component<ICalendarListingPro
 
     let NoOfItems = 5;
     try {
+      const TitleCon: Element = this.props.anyObjDom.querySelector('#displayMsg');
       if (!isNaN(Number(this.props.intNoOfItems)) && Number(this.props.intNoOfItems) > 0) {
         NoOfItems = Number(this.props.intNoOfItems);
       }
 
       this.methods.GetCalendarListItems(this.props.strListURL, NoOfItems).then((lstCalendarItem: ICalendarItemDetails[]) => {
-
-        for (let loopAllItmes = 0; loopAllItmes < lstCalendarItem.length; loopAllItmes++) {
-          if (lstCalendarItem[loopAllItmes].Description === null) {
-            lstCalendarItem[loopAllItmes].Description = "";
+        if (lstCalendarItem !== null && lstCalendarItem.length > 0) {
+          for (let loopAllItmes = 0; loopAllItmes < lstCalendarItem.length; loopAllItmes++) {
+            if (lstCalendarItem[loopAllItmes].Description === null) {
+              lstCalendarItem[loopAllItmes].Description = "";
+            }
+  
+            let currentEventDate = new Date(String(lstCalendarItem[loopAllItmes].EventDate));
+            lstCalendarItem[loopAllItmes].Month = Constants.MONTHLIST[currentEventDate.getMonth()];
+            lstCalendarItem[loopAllItmes].Day = currentEventDate.getDate();
           }
 
-          let currentEventDate = new Date(String(lstCalendarItem[loopAllItmes].EventDate));
-          lstCalendarItem[loopAllItmes].Month = Constants.MONTHLIST[currentEventDate.getMonth()];
-          lstCalendarItem[loopAllItmes].Day = currentEventDate.getDate();
-        }
-        if (lstCalendarItem !== null && lstCalendarItem.length > 0) {
           this.setState({ CalendarItems: lstCalendarItem });
+          TitleCon.innerHTML = ``;
         }
         else {
+          TitleCon.innerHTML = strings.StrItemNotFound;
           this.setState({ CalendarItems: [] });
         }
       });
@@ -282,7 +285,7 @@ export default class CalendarListing extends React.Component<ICalendarListingPro
         else {
           const digestCache: IDigestCache = this.props.anyContext.serviceScope.consume(DigestCache.serviceKey);
           digestCache.fetchDigest(this.props.anyPageContext.web.serverRelativeUrl).then((digest: string): void => {
-            let sitetemplateurl = this.props.anyPageContext.web.serverRelativeUrl + "/_api/SP.Utilities.Utility.SendEmail";
+            let sitetemplateurl = window.origin + "/_api/SP.Utilities.Utility.SendEmail";
             let pageURL = this.props.strListURL + Constants.DEFAULTURLINEMAIL + this.state.ShareId;
             let EmailBody = "";
             let EmailSubject = "";

@@ -1,10 +1,10 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "sope-demo-solution-client-side-solution",
+    "name": "calendar-events-solution-client-side-solution",
     "id": "29aeb994-48ac-4fdf-a461-d273ec6ab346",
     "version": "1.0.0.0",
-	  "features": [
+    "features": [
       {
         "title": "Calendar-solution",
         "description": "Calendar-solution",
@@ -21,6 +21,6 @@
     "isDomainIsolated": false
   },
   "paths": {
-    "zippedPackage": "solution/sope-demo-solution.sppkg"
+    "zippedPackage": "solution/calendar-events-solution.sppkg"
   }
 }
